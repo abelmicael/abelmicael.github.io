@@ -30,25 +30,3 @@ function myMap(arr, func) {
     return arr1;
 }
 
-/**
- * 
- * @returns {Array} creates a new array with function mapped to each element
- */
- function myMapExpression(num) {
-   
-    return num * 3;
-}
-// /**
-//  * 
-//  * @param {Number} num any number
-//  * @returns{Number} 
-//  */
-
- let myMapArrow = (num) => {return num * 3;};
-
-
-
-
-
-
-
