@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    <h1 id="hello">Hello</h1>
     <p>
         Book Title
         <br />
@@ -16,10 +17,19 @@
         <br />
         <input type="text" id="author" size="80" />
     </p>
+    <p>
+        Library ID
+        <br />
+        <input type="text" id="id" size="80" />
+    </p>
 
     <input type="button" value="Add book to library" id="addBtn" onclick="addBook();"/>
     <input type="button" value="Show titles" id="titlesBtn" onclick="showTitles();"/>
+    <input type="button" value="Show Authors" id="authorBtn" onclick="showAuthors();"/>
+    <input type="button" value="Show IDs" id="addBtn" onclick="ShowID();"/>
     <input type="button" value="Scramble" id="scrambleBtn" onclick="scramble();"/>
+    
+
 
     <p>
         <textarea id="displayArea" rows="10" cols="80"></textarea>

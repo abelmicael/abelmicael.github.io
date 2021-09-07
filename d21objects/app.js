@@ -27,7 +27,40 @@ function showTitles() {
     textArea.innerHTML = titleString;
 
 }
+/**
+ * @returns{undefined}
+ */
+function showAuthor() {
 
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const titles = findAuthors();
+
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    titles.sort();
+    const titleString = titles.join("\n");
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = titleString;
+
+}
+/**
+ * @returns{undefined}
+ */
+function showID() {
+
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const titles = findIDs();
+
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    titles.sort();
+    const titleString = titles.join("\n");
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = titleString;
+
+}
 /**
  * 
  * @return {object} array holding all titles as elements
@@ -47,14 +80,15 @@ function findTitles() {
  * @returns {undefined} no return
  * Event handler for Add book button.  Creates and adds book to the library
  */
-function addBook(bookTitle, bookAuthor, bookLilbraryID) {
+function addBook() {
     const newBook = {
-        title: bookTitle,
-        author: bookAuthor,
-        libraryID: bookLilbraryID
+        title: document.getElementById("title").innerHTML,
+        author: document.getElementById("author").innerHTML,
+        libraryID: document.getElementById("id").innerHTML
     }
     library.push(newBook);
-    // const title = document.getElementById("title"); //retrieves the book title from the title textbox
+   
+     //retrieves the book title from the title textbox
     //finish the implementation -- get the author, create a book object, and add to the library array
     return newBook;
 }
@@ -76,7 +110,10 @@ function findIDs() {
         ids[i] = library[i].libraryID;
        
     }
-return ids.sort()
+    ids.sort(function(a, b) {
+        return a - b;
+      });
+return ids
 
 }
 
