@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 "use strict";
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-// module.exports = { showTitles, findTitles, addBook, findAuthors, findIDs }; //add all of your function names here that you need for the node mocha tests
+ module.exports = { findTitles, addBook, findAuthors, findIDs }; //add all of your function names here that you need for the node mocha tests
 
 let library = [
     { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
@@ -36,22 +36,32 @@ function findTitles() {
     let titles = [];
     //titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
     for (let i = 0; i < library.length; i++) {
-        titles[i] = library[i].title.toUpperCase();
+        titles[i] = library[i].title;
     }
     titles.sort();
     return titles;
 }
+function addBookhtml() {
+    const newBook = {
+        title: document.getElementById("title").value,
+        author: document.getElementById("author").value,
+        libraryID: document.getElementById("id").value
+    }
 
+    
+    library.push(newBook);
+    return newBook;
+}
 /**
  * @returns {undefined} no return
  * Event handler for Add book button.  Creates and adds book to the library
  */
 
-function addBook() {
+function addBook(a,b,c) {
     const newBook = {
-        title: document.getElementById("title").value,
-        author: document.getElementById("author").value,
-        libraryID: document.getElementById("id").value
+        title: a,
+        author:b,
+        libraryID: c,
     }
 
     
@@ -80,7 +90,7 @@ function findAuthors() {
     const author = [];
 
     for (let i = 0; i < library.length; i++) {
-        author[i] = library[i].author.toUpperCase();
+        author[i] = library[i].author;
     }
     author.sort();
     return author;
