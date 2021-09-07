@@ -1,6 +1,6 @@
 "use strict";
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { findTitles, addBook, findAuthors, findIDs }; //add all of your function names here that you need for the node mocha tests
+module.exports = { findTitles, addBook, findAuthors, findIDs }; //add all of your function names here that you need for the node mocha tests
 
 
 let library = [
@@ -80,7 +80,8 @@ function findTitles() {
  * @returns {undefined} no return
  * Event handler for Add book button.  Creates and adds book to the library
  */
-function addBook() {
+function addBookHtml() {
+
     const newBook = {
         title: document.getElementById("title").innerHTML,
         author: document.getElementById("author").innerHTML,
@@ -92,7 +93,19 @@ function addBook() {
     //finish the implementation -- get the author, create a book object, and add to the library array
     return newBook;
 }
+function addBook(a,b,c) {
 
+    const newBook = {
+        title: a,
+        author: b,
+        libraryID:c
+    }
+    library.push(newBook);
+   
+     //retrieves the book title from the title textbox
+    //finish the implementation -- get the author, create a book object, and add to the library array
+    return newBook;
+}
 function findAuthors() {
     const author = [];
 
@@ -107,12 +120,11 @@ function findIDs() {
     const ids = [];
     
     for (let i = 0; i < library.length; i++) {
+
         ids[i] = library[i].libraryID;
        
     }
-    ids.sort(function(a, b) {
-        return a - b;
-      });
+    ids.sort(function(a, b){return a-b});
 return ids
 
 }
