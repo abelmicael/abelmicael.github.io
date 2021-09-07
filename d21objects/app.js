@@ -19,6 +19,7 @@ function showTitles() {
 
     const titles = findTitles();
 
+
     /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
     titles.sort();
     const titleString = titles.join("\n");
@@ -34,14 +35,14 @@ function showAuthor() {
 
     /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
 
-    const titles = findAuthors();
+    const authors = findAuthors();
 
     /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
-    titles.sort();
-    const titleString = titles.join("\n");
+ 
+    const authorsString = authors.join("\n");
 
     let textArea = document.getElementById("displayArea");
-    textArea.innerHTML = titleString;
+    textArea.innerHTML = authorsString;
 
 }
 /**
