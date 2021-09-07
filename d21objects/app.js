@@ -6,7 +6,8 @@
 let library = [
     { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
     { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
-    { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 }
+    { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 },
+    { title: "be", author: "Abel", libraryID: 1254 }
 ];
 
 /**
@@ -36,7 +37,7 @@ function showAuthor() {
     /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
 
     const authors = findAuthors();
-
+    authors.sort();
     /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
  
     const authorsString = authors.join("\n");
@@ -68,17 +69,17 @@ function showID() {
  */
 function findTitles() {
     let titles = [];
-    titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
+    //titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
     // implement this and other functions
     for (let i = 0; i < library.length; i++) {
-        titles[i] = library[i].title;
+        titles[i] = library[i].title.toUpperCase();
     }
-    titles.sort();
+    // titles.sort();
     return titles;
 }
 
 /**
- * @returns {undefined} no return
+ * @returns {object} addbook returns added book 
  * Event handler for Add book button.  Creates and adds book to the library
  */
 function addBookHtml() {
@@ -117,6 +118,7 @@ function findAuthors() {
     author.sort();
     return author;
 }
+
 /**
  * @retruns{Array} ids sorted id array
  */
@@ -133,3 +135,6 @@ return ids
 
 }
 
+function scramble(){
+    
+}
