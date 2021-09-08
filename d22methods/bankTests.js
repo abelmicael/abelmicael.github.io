@@ -9,14 +9,11 @@
 
 describe("bank tests", function () {
 
-    it("checks initial balance", function () {
+    it("balance after credit of 20 and debit of 1000", function () {
         assert.strictEqual(bank.bankBalance(), 85);
         bank.credit(1, 20);
         bank.debit(1, 1000);
         assert.strictEqual(bank.bankBalance(), 105);
-
-
-        //assert.strictEqual(bank.bankBalance(), 105);
 
     });
 

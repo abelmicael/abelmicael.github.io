@@ -52,10 +52,10 @@ bank.getBalance = function (id) {
             for (let x of bank.transactionsDB[i].customerTransactions) {
                 sum += x;
             }
-            break;
+            return sum;
         }
     }
-    return sum;
+    return ;
 
 };
 
