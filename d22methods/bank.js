@@ -74,12 +74,7 @@ bank.bankBalance = function () {
     }
     return sum;
 };
-console.log(bank.transactionsDB )
-console.log("total balance should be 85: ", bank.bankBalance());
- bank.credit(1, 20);
-bank.debit(1, 1000);
-console.log(bank.transactionsDB )
-console.log("total should now be 105: ", bank.bankBalance());
+
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
 /* must be at end of file if are exporting an object so the export is after the definition */
