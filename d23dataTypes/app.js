@@ -2,10 +2,14 @@
 /* eslint-disable */
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { ucFirst, getMaxSubSum, truncate, camelize, checkSpam ,extractCurrencyValue}; //add all of your function names here that you need for the node mocha tests
+//module.exports = { ucFirst, getMaxSubSum, truncate, camelize, checkSpam ,extractCurrencyValue}; //add all of your function names here that you need for the node mocha tests
 
 
-
+/**
+ * 
+ * @param {string} str any word
+ * @returns{string}returns string changed first letter to upper case
+ */
 function ucFirst(str) {
     let word = "";
     word = str.charAt(0).toUpperCase()
@@ -15,7 +19,11 @@ function ucFirst(str) {
 
 }
 
-
+/**
+ * 
+ * @param {string} str any word
+ * @returns{boolean} return true or false after checking if word contains spam
+ */
 function checkSpam(str) {
     const word = ["xxx", "Viagra", "sex"];
     for (let i = 0; i < word.length; i++) {
@@ -26,7 +34,12 @@ function checkSpam(str) {
     return false;
 }
 
-
+/**
+ * 
+ * @param {string} str any word
+ * @param {number} maxlength any number 
+ * @returns{string} returns truncuted string
+ */
 function truncate(str, maxlength) {
     let word = "";
     if (str.length > maxlength) {
@@ -44,7 +57,6 @@ function truncate(str, maxlength) {
  * @returns {number} the total of the maximal subarray
  
  */
-// [1,5,-1,3,5,3,-9]
 function getMaxSubSum(arr) {
     let max = 0;
 
@@ -61,7 +73,11 @@ function getMaxSubSum(arr) {
 
 }
 
-
+/**
+ * 
+ * @param {string} str 
+ * @returns{string} returns string of camel case
+ */
 function camelize(str) {
     let newWord = "";
 
@@ -75,9 +91,12 @@ function camelize(str) {
     return word[0] + newWord;
 
 }
-
+/**
+ * 
+ * @param {string} str any word
+ * @returns {number} return a number 
+ */
 function extractCurrencyValue(str){
     return parseInt(str.substring(1))
 }
 
-console.log(extractCurrencyValue("$120"))
