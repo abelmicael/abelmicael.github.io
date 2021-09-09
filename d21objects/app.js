@@ -137,8 +137,14 @@ function scramble() {
     const titleWord = titles.toString().split(" ");
     console.log(titleWord);
     const sortedTitle = titleWord.sort((aaa, bbb) => aaa.length - bbb.length);
-    console.log(sortedTitle);
+    
+    let i=1;
+    while(i<sortedTitle.length){
+       
+        if(sortedTitle[i])
+    }
     const titleString = titles.join("\n");
     let textArea = document.getElementById("displayArea");
     textArea.innerHTML = titleString;
  }
+scramble();
