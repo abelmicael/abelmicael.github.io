@@ -132,19 +132,19 @@ function findIDs() {
 /** 
 * @return {object} array holding all titles as elements
 */
-function scramble() {
-    const titles = findTitles();
-    const titleWord = titles.toString().split(" ");
-    console.log(titleWord);
-    const sortedTitle = titleWord.sort((aaa, bbb) => aaa.length - bbb.length);
+//function scramble() {
+//     const titles = findTitles();
+//     const titleWord = titles.toString().split(" ");
+//     console.log(titleWord);
+//     const sortedTitle = titleWord.sort((aaa, bbb) => aaa.length - bbb.length);
     
-    let i=1;
-    while(i<sortedTitle.length){
+//     let i=1;
+//     while(i<sortedTitle.length){
        
-        if(sortedTitle[i])
-    }
-    const titleString = titles.join("\n");
-    let textArea = document.getElementById("displayArea");
-    textArea.innerHTML = titleString;
- }
-scramble();
+//         if(sortedTitle[i])
+    
+//     const titleString = titles.join("\n");
+//     let textArea = document.getElementById("displayArea");
+//     textArea.innerHTML = titleString;
+//  }
+// scramble();
