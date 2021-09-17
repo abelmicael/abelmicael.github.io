@@ -52,7 +52,7 @@ describe("recursion tests", function () {
     });
     it("iterative version prints 1 2 3 4 to console", function () {
         assert.strictEqual(outputListLoop(list), "1 2 3 4 printed to console");
-    }); 
+    });     
 
     it("recursive version prints 4 3 2 1 to console", function () {
         assert.strictEqual(reverseList(list), "4 3 2 1");
