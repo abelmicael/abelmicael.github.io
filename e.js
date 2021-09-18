@@ -135,18 +135,32 @@
 // let y = x;
 
 
-let x =[1,2,3,4];
+// let x =[1,2,3,4];
 
-function finder(arr){
-    let y=  arr.findIndex(item=>{
-        return item %2==0;
-    })
-    return y;
-    }
-console.log(finder(x));
+// function finder(arr){
+//     let y=  arr.findIndex(item=>{
+//         return item %2==0;
+//     })
+//     return y;
+//     }
+// console.log(finder(x));
 
+// var intervale;
+// let counter = 1;
+// function sayhi(from, stop) {
+//     if (counter > from) {
+//         console.log(counter)
+//     }
+//     if (counter === stop) {
+//         clearInterval(intervale)
+//     }
+//     counter++;
+// }
 
+function hi(){
+    console.log("hi");
+}
 
-
+intervale = setInterval(sayhi, 1000, 5, 10)
 
 
