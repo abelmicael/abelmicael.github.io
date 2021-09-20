@@ -49,6 +49,13 @@ let user2 = {
 };
 
 
+function askPassword3(ok, fail, password) {
+    if (password == "rockstar")
+        return ok;
+    else
+        return fail;
+}
+
 
 
 

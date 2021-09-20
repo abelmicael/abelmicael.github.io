@@ -34,4 +34,26 @@ describe("Partial application for login", function () {
         assert.strictEqual(askPassword2(() => user2.login(true), () => user2.login(false), "1234"), "John failed to log in");
     });
 
+});describe("fix function that loses 'this' usinf call", function () {
+
+    it("tests rockstar", function () {
+        assert.strictEqual(askPassword3(user.loginOk.call(user), user.loginFail.call(user), "rockstar"), "John logged in");
+    });
+
+    it("tests wrong password", function () {
+        assert.strictEqual(askPassword3(user.loginOk.call(user), user.loginFail.call(user), "1234"), "John failed to log in");
+    });
+ 
+});
+
+describe("fix function that loses 'this' using apply", function () {
+
+    it("tests rockstar", function () {
+        assert.strictEqual(askPassword3(user.loginOk.apply(user), user.loginFail.apply(user), "rockstar"), "John logged in");
+    });
+
+    it("tests wrong password", function () {
+        assert.strictEqual(askPassword3(user.loginOk.apply(user), user.loginFail.apply(user), "1234"), "John failed to log in");
+    });
+ 
 });
