@@ -1,0 +1,118 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}   
+.text-box{
+    position:absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+    font-weight: 900px;
+    mix-blend-mode: multiply;
+    font-size: large;
+}
+.container video{
+   object-fit: cover;
+   width: 100%;
+    height: 100%;
+}
+
+.banner video{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner h3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 50vh;
+    mix-blend-mode: screen;
+    text-align: center;
+} */
+
+ @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 20vw;
+    text-align: center;
+    font-weight: 1000;
+    line-height: 0.85em;
+    color: white;
+    background: #000;
+    mix-blend-mode: multiply;
+
+}
+section h2 span{
+    font-size: 0.3em;
+    line-height: 0.85em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h1 {
+    text-transform:capitalize;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
